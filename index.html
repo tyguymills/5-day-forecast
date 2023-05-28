@@ -11,60 +11,24 @@
     <header>
         <h1>Weather Dashboard</h1>
     </header>
+   
+
     <main>
-        <div class="searchContainer">
-            <article>5 day Weather Forecast</article>
-            <div>
-                <input type="text" id="search" placeholder="city">
-                <br>                
-                <center><button onclick="getWeather()" id="searchButton">Search</button></center>
-            </div>
-            <div><center>
-                <br>
-                <button id="cityButtons"></button>
-                <br>
-                <button id="cityButtons"></button>
-                <br>
-                <button id="cityButtons"></button>
-                <br>
-                <button id="cityButtons"></button>
-                <br>
-                <button id="cityButtons"></button>
-                <br>
-                <button id="cityButtons"></button>
-                <br>
-                <button id="cityButtons"></button>
-                <br>
-            </center></div>
-        </div>
-
-        <div>
-            <div class="cityContainer">
-                <h2 id="cityName">City:</h2>
-                
-                <div>
-                    <p id="temp"></p>
-                    <p id="wind"></p>
-                    <p id="humidity"></p>
-                </div>
-            </div>
-            
-            <div class="dayContainer">
-                <h2>5 Day Forecast</h2>
-                    <div class="day1"></div>
-                    <div class="day2"></div>
-                    <div class="day3"></div>
-                    <div class="day4"></div>
-                    <div class="day5"></div>
-            </div>
-        </div>
+        <article id="leftContainer">
+            <h2>Search For A City</h2>
+            <input type="text" id="city" placeholder="Enter City Name">
+            <button onclick="getWeather()" id="search">Search</button>
+            <button onclick="clearCities()">Clear Cities</button>
+            <section id="cityList"></section>
+        </article>
 
 
- 
 
-
+        <article id="rightContainer">
+            <section id="current"></section>
+            <section id="fiveDays"></section>
+        </article>
     </main>
-
 
 </body>
 <script src="./index.js"></script>

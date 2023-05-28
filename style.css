@@ -1,23 +1,53 @@
 * {
     margin:0;
-}
-main > div {
-    float:left;
-    padding:5px;
+    padding:0;
 }
 header {
-    border-bottom: 1px solid black;
-    padding:10px;
+    background:linear-gradient(to right,lightblue,darkblue);
+    width:100%;
 }
-article {
-    font-weight: bold;
+main {
+    display:flex;
+    column-gap: 2em;
 }
-.searchContainer {
-    border:1px solid black;
+#leftContainer {
+    /* making it 20% of the main */
+    flex-basis: 20%;
+    /* doesn't force divs to shrink when browser changes size */
+    flex-shrink: 0;
+    margin-left: 1em;
 }
-input {
-    margin:10px 0px;
+#leftContainer, #rightContainer {
+    margin-top: 1em;
 }
-#searchbutton {
-    background-color: blue;
+.card {
+    background-color: #000000;
+    color: #ffffff;
+    padding:2em;
+    /* changes size twice as much */
+    flex-shrink: 2;
+}
+h1 {
+    margin-left: 50%;
+    color:#ffffff;
+}
+h2, h3, p {
+    font-size: 2em;
+}
+button, input {
+    width:100%;
+    margin-top: 1em;
+    font-size: 2em;
+}
+#search {
+    background: blue;
+    color:#fff;
+    margin-top: .2em;
+}
+#border {
+    border:solid #000;
+}
+#fiveDays {
+    display:flex;
+    gap:15px;
 }
